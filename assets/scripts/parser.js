@@ -14,7 +14,9 @@ let myResults = {
         this.textInput = qi('source').value;
 
         // strip punctuation
-        this.strippedInput = this.textInput.replace(/[^\w\s]+/g, "")
+        this.strippedInput = this.textInput.replace(/[^\w\s]+/g, "");
+        // handle multiple spaces aruond punctuation
+        this.strippedInput = this.strippedInput.replace(/\s\s+/g, ' ');
         // handle dupes by converting to lowercase
         this.strippedInput = this.strippedInput.toLowerCase();
         // generate the sorted dictionary via function
