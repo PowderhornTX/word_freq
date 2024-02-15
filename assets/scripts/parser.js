@@ -15,7 +15,7 @@ let myResults = {
 
         // strip punctuation
         this.strippedInput = this.textInput.replace(/[^\w\s]+/g, "");
-        // handle multiple spaces aruond punctuation
+        // handle multiple spaces around punctuation
         this.strippedInput = this.strippedInput.replace(/\s\s+/g, ' ');
         // handle dupes by converting to lowercase
         this.strippedInput = this.strippedInput.toLowerCase();
